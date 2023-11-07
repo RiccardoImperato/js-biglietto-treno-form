@@ -1,21 +1,31 @@
 /* Common */
 
-:root{
-    --main-color:#b91547;
+:root {
+    --main-color: #b91547;
 }
 
-body{
+body {
     color: #fff;
     background-color: var(--main-color);
 }
 
-.container{
+.container {
     color: var(--main-color);
-    background-color: #fff;
 }
 
-.comandi input{
+.input input,
+.input select {
+    border-color: var(--main-color);
+}
+
+.comandi input {
     color: var(--main-color);
+    border-color: var(--main-color);
+    border-radius: .3125rem;
+}
+
+.biglietto {
+    color: #000;
 }
 
 /*/ Common */

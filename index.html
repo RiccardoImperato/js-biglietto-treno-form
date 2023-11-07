@@ -16,18 +16,18 @@
   </head>
 
   <body>
-    <h1 class="text-center text-uppercase">
+    <div class="h1 text-center text-uppercase">
       Calcola il prezzo del tuo biglietto
-    </h1>
-    <div class="container d-flex flex-column align-items-center rounded p-3">
-      <div class="w-100 mb-4 d-flex justify-content-evenly">
+    </div>
+    <form action="#" method="get" class="container d-flex flex-column align-items-center rounded p-3 bg-white">
+      <div class="input w-100 mb-4 d-flex justify-content-evenly">
         <div class="mb-3 text-center">
           <label for="nome" class="form-label">Nome e Cognome</label>
           <input type="text" class="form-control" id="nome" />
         </div>
         <div class="mb-3 text-center">
           <label for="distanza" class="form-label">Km da percorrere</label>
-          <input type="number" class="form-control" id="distanza" />
+          <input type="number" class="form-control text-center" id="distanza" />
         </div>
         <div class="mb-3 text-center">
           <label for="eta" class="form-label">Fascia d'età</label>
@@ -38,11 +38,45 @@
           </select>
         </div>
       </div>
-
       <div class="comandi">
         <input type="button" value="Genera" class="fw-bold" id="genera" />
-        <input type="button" value="Annulla" class="fw-bold" id="annulla" />
+        <input type="reset" value="Annulla" class="fw-bold" id="annulla" />
       </div>
+    </form>
+    <div class="h1 text-center text-uppercase mt-4">
+      Il tuo biglietto
+    </div>
+    <div class="biglietto container bg-white">
+      <div class="row p-3">
+        <h5 class="text-uppercase ">Dettagli passeggero</h5>
+        <div class="col-3 bg-secondary p-3">
+          <div>
+          <div class="h5 text-uppercase">Nome passeggero</div>
+          <span id="bigliettoNome"></span>
+          </div>
+        </div>
+        <div class="col-9 border-top border-bottom">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">Offerta</th>
+                <th scope="col">Carrozza</th>
+                <th scope="col">Codice CP</th>
+                <th scope="col">Costo biglietto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="offerta"></td>
+                <td id="carrozza"></td>
+                <td id="codice"></td>
+                <td id="costo"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
     </div>
 
     <script
