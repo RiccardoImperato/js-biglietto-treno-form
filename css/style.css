@@ -1,13 +1,21 @@
 /* Common */
 
+:root{
+    --main-color:#b91547;
+}
+
 body{
     color: #fff;
-    background-color: #b91547;
+    background-color: var(--main-color);
 }
 
 .container{
-    color: #b91547;
+    color: var(--main-color);
     background-color: #fff;
+}
+
+.comandi input{
+    color: var(--main-color);
 }
 
 /*/ Common */

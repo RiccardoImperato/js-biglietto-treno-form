@@ -32,16 +32,16 @@ btnGenera.addEventListener("click", function () {
   const etaValue = eta.value;
   const distanzaValue = distanzaKm.value;
 
-  if (!isNaN(distanzaValue) && !isNaN(etaValue)) {
+  if (!isNaN(distanzaValue)) {
     // Prezzo iniziale
     let prezzo = prezzoKm * distanzaValue;
     // Sconto iniziale
     let sconto = 0;
     // Calcolo sconto minorenni
-    if (etaValue < 18) {
+    if (etaValue === "Minorenne") {
       prezzo = prezzo - (prezzo * scontoMinorenni) / 100;
       // Calcolo sconto over 65
-    } else if (etaValue >= 65) {
+    } else if (etaValue === "Over65") {
       prezzo = prezzo - (prezzo * scontoOver65) / 100;
     }
     // Calcolo prezzo scontato

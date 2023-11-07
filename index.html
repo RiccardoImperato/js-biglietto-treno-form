@@ -21,32 +21,29 @@
     </h1>
     <div class="container d-flex flex-column align-items-center rounded p-3">
       <div class="w-100 mb-4 d-flex justify-content-evenly">
-        <form>
-          <div class="mb-3 text-center">
-            <label for="nome" class="form-label">Nome e Cognome</label>
-            <input type="text" class="form-control" id="nome" />
-          </div>
-        </form>
-        <form>
-          <div class="mb-3 text-center">
-            <label for="distanza" class="form-label">Km da percorrere</label>
-            <input type="text" class="form-control" id="distanza" />
-          </div>
-        </form>
-        <form>
-          <div class="mb-3 text-center">
-            <label for="eta" class="form-label">Fascia d'età</label>
-            <input type="text" class="form-control" id="eta" />
-          </div>
-        </form>
+        <div class="mb-3 text-center">
+          <label for="nome" class="form-label">Nome e Cognome</label>
+          <input type="text" class="form-control" id="nome" />
+        </div>
+        <div class="mb-3 text-center">
+          <label for="distanza" class="form-label">Km da percorrere</label>
+          <input type="number" class="form-control" id="distanza" />
+        </div>
+        <div class="mb-3 text-center">
+          <label for="eta" class="form-label">Fascia d'età</label>
+          <select class="form-select" id="eta">
+            <option value="Maggiorenne">Maggiorenne</option>
+            <option value="Minorenne">Minorenne</option>
+            <option value="Over65">Over 65</option>
+          </select>
+        </div>
       </div>
-      <div>
-        <input type="button" value="Genera" id="genera" />
-        <input type="button" value="Annulla" id="annulla" />
+
+      <div class="comandi">
+        <input type="button" value="Genera" class="fw-bold" id="genera" />
+        <input type="button" value="Annulla" class="fw-bold" id="annulla" />
       </div>
     </div>
-
-    <div class="h2" id="bigliettoNome"></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
