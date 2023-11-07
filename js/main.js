@@ -11,6 +11,9 @@
 // Distanza
 const distanzaKm = document.getElementById("distanza");
 
+// Nome
+const nome = document.getElementById('nome')
+
 // Età
 const eta = document.getElementById("eta");
 
@@ -22,15 +25,29 @@ const scontoMinorenni = 20;
 const scontoOver65 = 40;
 
 // 5) Stampo il prezzo finale del biglietto con due cifre decimali
-// 6) Implemento il programma usando due input e un bottone
+// 6) Implemento il programma usando tre input e un due bottoni
 
-// Bottone genera
+// Bottoni genera e annulla
 const btnGenera = document.getElementById("genera");
+const btnAnnulla = document.getElementById("annulla");
+
+// Biglietto
+const biglietto = document.getElementById('biglietto');
+const bigliettoNome = document.getElementById('bigliettoNome')
+const offerta = document.getElementById('offerta')
+const carrozza = document.getElementById('carrozza')
+const codice = document.getElementById('codice')
+const costo = document.getElementById('costo')
 
 // Condizioni
 btnGenera.addEventListener("click", function () {
   const etaValue = eta.value;
   const distanzaValue = distanzaKm.value;
+  biglietto.classList.toggle('d-none')
+  bigliettoNome.innerHTML = nome.value;
+  offerta.innerHTML = 'Biglietto Standard';
+  carrozza.innerHTML = Math.floor(Math.random() * 20 + 1)
+  codice.innerHTML = Math.floor(Math.random() * 10000)
 
   if (!isNaN(distanzaValue)) {
     // Prezzo iniziale
@@ -40,15 +57,22 @@ btnGenera.addEventListener("click", function () {
     // Calcolo sconto minorenni
     if (etaValue === "Minorenne") {
       prezzo = prezzo - (prezzo * scontoMinorenni) / 100;
+      offerta.innerHTML = 'Offerta Junior'
       // Calcolo sconto over 65
     } else if (etaValue === "Over65") {
       prezzo = prezzo - (prezzo * scontoOver65) / 100;
+      offerta.innerHTML = 'Offerta Senior';
     }
     // Calcolo prezzo scontato
     prezzo -= sconto;
+    costo.innerHTML =(prezzo.toFixed(2) + ' €');
     console.log("Prezzo biglietto:", prezzo.toFixed(2), "€");
     // Dati inseriti non validi
   } else {
     console.log("Errore, valori non validi");
   }
 });
+
+btnAnnulla.addEventListener('click', function(){
+  biglietto.classList.toggle('d-none')
+})

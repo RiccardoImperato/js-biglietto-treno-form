@@ -19,7 +19,9 @@
     <div class="h1 text-center text-uppercase">
       Calcola il prezzo del tuo biglietto
     </div>
+    <!-- Form -->
     <form action="#" method="get" class="container d-flex flex-column align-items-center rounded p-3 bg-white">
+        <!-- Dati utente -->
       <div class="input w-100 mb-4 d-flex justify-content-evenly">
         <div class="mb-3 text-center">
           <label for="nome" class="form-label">Nome e Cognome</label>
@@ -38,15 +40,20 @@
           </select>
         </div>
       </div>
+        <!-- /Dati utente -->
+        <!-- Bottoni -->
       <div class="comandi">
         <input type="button" value="Genera" class="fw-bold" id="genera" />
         <input type="reset" value="Annulla" class="fw-bold" id="annulla" />
       </div>
+        <!-- /Bottoni -->
     </form>
+    <!-- /Form -->
+    <!-- Biglietto -->
     <div class="h1 text-center text-uppercase mt-4">
       Il tuo biglietto
     </div>
-    <div class="biglietto container bg-white">
+    <div class="container bg-white text-black d-none rounded" id="biglietto">
       <div class="row p-3">
         <h5 class="text-uppercase ">Dettagli passeggero</h5>
         <div class="col-3 bg-secondary p-3">
@@ -76,14 +83,17 @@
           </table>
         </div>
       </div>
-      
     </div>
-
+    <!-- /Biglietto -->
+    <!-- Bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <!-- /Bootstrap script -->
+    <!-- My script -->
     <script src="js/main.js"></script>
+    <!-- /My script -->
   </body>
 </html>
